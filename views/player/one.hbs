@@ -1,0 +1,55 @@
+<h2>{{player.name}}</h2>
+<table class="header-of-left">
+  <tbody>
+    <tr>
+      <th>
+        Name
+      </th>
+      <td>
+        {{player.name}}
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Birth
+      </th>
+      <td>
+        {{player.birth}}
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Club
+      </th>
+      <td>
+        {{player.club}}
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Position
+      </th>
+      <td>
+        {{player.position}}
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Foot
+      </th>
+      <td>
+        {{player.foot}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <form method="GET" action="/player/form/edit/{{player.id}}">
+    <button type="submit">Edit</button>
+  </form>
+</p>
+
+<p>
+  {{> go-to-players}}
+</p>

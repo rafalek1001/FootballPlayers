@@ -1,0 +1,55 @@
+<h2>List of all Players</h2>
+<table>
+  <thead>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Birth
+      </th>
+      <th>
+        Club
+      </th>
+      <th>
+        Position
+      </th>
+      <th>
+        Foot
+      </th>
+      <th>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each players}}
+    <tr>
+      <th>
+        <a href="/player/{{this.id}}">{{this.name}}</a>
+      </th>
+      <td>
+        {{this.birth}}
+      </td>
+      <td>
+        {{this.club}}
+      </td>
+      <td>
+        {{this.position}}
+      </td>
+      <td>
+        {{this.foot}}
+      </td>
+      <td>
+        <a href="/player/{{this.id}}"><button>Details</button></a>
+        <form method="POST" action="/player/{{this.id}}?_method=DELETE"><button type="submit">Delete</button></form>
+      </td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
+
+<p>
+  <form method="GET" action="/player/form/add">
+    <button type="submit">Add new Player</button>
+  </form>
+</p>
